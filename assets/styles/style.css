@@ -1,0 +1,447 @@
+/*  Global  */
+
+:root {
+  --main-color: rgb(221, 221, 221);
+  --secondary-color: #444;
+  --accent-color: rgb(241, 88, 145);
+  --btn-gradient: linear-gradient(
+    90deg,
+    rgb(241, 88, 145) 0%,
+    rgb(44, 48, 209) 100%
+  );
+}
+
+@keyframes float {
+  0% {
+    top: -2%;
+  }
+
+  100% {
+    top: 2%;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: rgb(30, 27, 106);
+  background: linear-gradient(90deg, rgb(30, 27, 106) 0%, rgb(18, 8, 61) 100%);
+}
+
+.btn {
+  background: var(--btn-gradient);
+  color: var(--main-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(241, 88, 145, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(0.9);
+}
+
+.links .link,
+.links .btn {
+  color: var(--main-color);
+  font-size: 1rem;
+  margin: 0 15px;
+}
+
+.links .link {
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.links .btn:hover {
+  box-shadow: 0 0 25px rgba(241, 88, 145, 0.8);
+}
+
+.links .link:hover {
+  font-size: 1.1rem;
+  color: rgba(221, 221, 221, 0.7);
+}
+
+/*  Navbar  */
+
+.navbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar .logo .company-name {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.navbar .logo .logo-image {
+  width: 50px;
+  margin-right: 5px;
+}
+
+/*  Hero Section  */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero-bg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 101%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.hero .container {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-logo {
+  width: 100%;
+}
+
+.hero .container .hero-left {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--main-color);
+}
+
+.hero .container .hero-left p {
+  margin: 20px 0 70px 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.hero .container .hero-left h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.hero .container .hero-left .accent {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  text-shadow: 0 0 15px rgba(241, 88, 145, 0.5);
+}
+
+.hero .container .hero-left .btn {
+  padding: 15px 50px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+}
+
+.hero .container .hero-right {
+  position: relative;
+}
+
+.hero .container .hero-right .hero-image {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*  Desc Section  */
+
+.desc {
+  width: 100%;
+  height: auto;
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.desc .floating-image {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 1s infinite alternate ease-in-out;
+}
+
+.desc .title {
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 200px 0 20px 0;
+}
+
+.desc .card {
+  width: 60%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+.desc .desc-line {
+  width: 100px;
+  height: 10px;
+  background: var(--btn-gradient);
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.card .card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  width: 90%;
+  color: var(--secondary-color);
+}
+
+.card .card-item .card-icon {
+  height: 60px;
+  margin: 0 0 10px 10px;
+}
+
+.card .card-item .card-header {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.card .card-item .card-desc {
+  font-size: 0.9rem;
+}
+
+/*  Form Section  */
+
+.form {
+  height: 100vh;
+}
+
+.form .form-bg {
+  width: 100%;
+  height: 25%;
+  background-image: url("../images/hero-bg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 101%;
+  transform: scaleY(-1);
+}
+
+.form .form-group {
+  width: 50%;
+  margin: auto;
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .form-group .form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form .form-group .form-desc {
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+.form .form-inputs {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.form .form-inputs .form-input:nth-child(3),
+.form .form-inputs .check {
+  grid-column: 1/3;
+}
+
+.form .form-inputs .form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.form .form-inputs .form-input label {
+  margin-bottom: 10px;
+}
+
+.form .form-inputs .form-input input::placeholder {
+  font-size: 0.9rem;
+}
+
+.form .form-inputs .form-input input {
+  font-size: 1rem;
+  padding-bottom: 10px;
+  background: transparent;
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--main-color);
+}
+
+.form .form-inputs .form-input input:focus {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.form .form-inputs .btn {
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .form-inputs .check .check-container {
+  position: relative;
+  height: 25px;
+  width: 100%;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding-left: 35px;
+  line-height: 25px;
+}
+
+.form .form-inputs #checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form .form-inputs .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid rgba(221, 221, 221, 0.5);
+  border-radius: 5px;
+}
+
+.form .form-inputs .check .check-container:hover input ~ .checkmark {
+  background-color: rgba(221, 221, 221, 0.2);
+}
+
+.form .form-inputs .check .check-container input:checked ~ .checkmark {
+  background-color: rgba(221, 221, 221, 0.2);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.form .form-inputs .check .check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.form .form-inputs .check .check-container .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*  Footer Section  */
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer .footer-wrapper,
+.footer .footer-wrapper .upper,
+.footer .footer-wrapper .lower {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+}
+.footer .footer-wrapper {
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.footer .footer-wrapper .lower .credits {
+  margin: auto;
+  text-align: center;
+}
+
+.footer .footer-wrapper .lower .credits a {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+}
+
+.footer .footer-wrapper .lower h2 {
+  margin-top: 10px;
+  font-size: 0.7rem;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer .logo .company-name {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.footer .logo .logo-image {
+  width: 50px;
+  margin-right: 5px;
+}
+
+/*  Particle.js  */
+
+canvas {
+  display: block;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
