@@ -202,6 +202,7 @@ body {
   width: 60%;
   height: auto;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: auto;
 }
@@ -215,6 +216,7 @@ body {
 }
 
 .card .card-item {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

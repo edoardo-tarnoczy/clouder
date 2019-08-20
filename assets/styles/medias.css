@@ -1,0 +1,94 @@
+/* ----------- iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+  }
+
+  .hero .container .hero-left {
+    margin: auto;
+    height: 50%;
+  }
+}
+
+/* ----------- Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar {
+    width: 90%;
+  }
+  .links .btn {
+    display: none;
+  }
+
+  .hero {
+    height: 100%;
+    background-position-y: 101%;
+  }
+  .hero .container {
+    display: inline;
+  }
+  .hero .container .hero-left {
+    margin: 200px auto;
+    align-items: center;
+    text-align: center;
+  }
+  .hero .container .hero-right {
+    display: none;
+  }
+
+  .desc .card {
+    text-align: center;
+  }
+  .desc .floating-image {
+    width: 170px;
+  }
+  .desc .title {
+    padding: 120px 0 20px 0;
+  }
+  .card .card-item {
+    align-items: center;
+  }
+  .form .form-bg {
+    height: 100px;
+  }
+
+  .form .form-group {
+    width: 90%;
+  }
+  .form .form-group .form-title,
+  .form .form-group .form-desc {
+    text-align: center;
+  }
+  .form .form-inputs {
+    grid-gap: 10px;
+  }
+
+  .form .form-inputs .check {
+    margin: auto;
+  }
+  .form .form-inputs .btn {
+    grid-column: 1/3;
+    justify-self: center;
+    width: 50%;
+  }
+  .footer .footer-wrapper,
+  .footer .footer-wrapper .upper,
+  .footer .footer-wrapper .lower {
+    flex-direction: column;
+  }
+  .footer .footer-wrapper .upper .logo {
+    margin-bottom: 20px;
+  }
+  .footer .footer-wrapper .links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .footer-wrapper .links .link {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
