@@ -254,7 +254,7 @@ body {
   background-image: url("../images/hero-bg.svg");
   background-size: 102%;
   background-repeat: no-repeat;
-  background-position-y: 101%;
+  background-position-y: 102%;
   transform: scaleY(-1);
 }
 
