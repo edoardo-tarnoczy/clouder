@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1900px) {
   .desc .card{
-  grid-template-colums: repeat(auto-fit, minmax(50%, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr))
   }
 }
 
