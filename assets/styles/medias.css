@@ -1,3 +1,14 @@
+/* ----------- Large screens ----------- */
+
+@media only screen and (min-width: 1920px) {
+  .desc .card{
+  grid-template-colums: repeat(auto-fit, minmax(50%, 1fr))
+  }
+}
+
+
+
+
 /* ----------- iPads (portrait and landscape) ----------- */
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
