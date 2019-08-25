@@ -132,5 +132,5 @@ window.addEventListener("scroll", e => {
 window.addEventListener("resize", () => {
   height = body.offsetHeight;
   particle.style.height = "0px";
-  particle.style.height = height + "px";
+  particle.style.height = height * 1.05 + "px";
 });
