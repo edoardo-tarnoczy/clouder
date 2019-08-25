@@ -128,3 +128,9 @@ window.addEventListener("scroll", e => {
   const background = document.querySelector(".thumbnail");
   background.style.top = -(scrolled * 0.1) + "px";
 });
+
+window.addEventListener("resize", () => {
+  height = body.offsetHeight;
+  particle.style.height = "0px";
+  particle.style.height = height + "px";
+});

@@ -46,7 +46,7 @@
     display: inline;
   }
   .hero .container .hero-left {
-    margin: 200px auto;
+    margin: 100px 0 150px 0;
     align-items: center;
     text-align: center;
   }
